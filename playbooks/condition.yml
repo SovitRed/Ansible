@@ -1,0 +1,12 @@
+---
+- hosts: demo
+  user: ansible
+  become: yes
+  connection: ssh
+  tasks:
+          - name: install apche for debian family
+            command: apt-get -y install apache2
+            when: ansible_os_family == "debian"
+          - name: install nginx for redhat family
+            command: apt-get -y install nginx
+            when: ansible_os_family == "redhat"
