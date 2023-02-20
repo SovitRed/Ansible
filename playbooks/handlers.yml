@@ -1,0 +1,14 @@
+--- 
+- hosts: demo
+  user: ansible
+  become: yes
+  connection: ssh
+  tasks:
+          - name: install apache on machine
+            action: apt name=apache2 state=present
+            notify: restart apache
+  handlers:
+          - name: restart apache
+            action: service name=apache2 state=restarted
+
+

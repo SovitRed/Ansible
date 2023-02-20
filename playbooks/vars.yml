@@ -1,0 +1,10 @@
+--- 
+- hosts: demo
+  user: ansible
+  become: yes
+  connection: ssh
+  vars:
+          pkgname: nginx
+  tasks:
+          - name: install nginx on my local machine
+            action: apt name='{{pkgname}}' state=present
