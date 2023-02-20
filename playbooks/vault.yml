@@ -7,3 +7,11 @@ $ANSIBLE_VAULT;1.1;AES256
 32356234313564376638303039363064346231306164666139646237386436353965343032353665
 65643039656634613238643362316231303631316539353632623933623839383536613661306164
 30636335653430353866
+
+Description:
+for new file creating command will be: $ ansible-vault create vault.yml
+for edit vault file command: $ ansbile-vault edit vault.yml
+for password change command: $ ansible-vault rekey vault.yml
+if we want to encrypt any file then command will be: $ ansible-vault encrypt handlers.yml
+then enter paasword 
+if we want to decrypt that file : $ ansible-vault decrypt handlers.yml
