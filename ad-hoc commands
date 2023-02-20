@@ -1,0 +1,12 @@
+ansible demo -a "ls"
+ansible demo[0] -a "touch file"
+ansible all -a "touch file2"
+ansible demo -a "ls -al"
+ansible demo -a "sudo apt install apache2 -y"
+ansbile demo -ba "apt isntall apache2 -y"
+ansible demo -ba "apt remove apache2 -y"
+
+Description:
+- a stands for argument
+demo: group name which is mention on inventory file
+-b : become (sudo privillages)
