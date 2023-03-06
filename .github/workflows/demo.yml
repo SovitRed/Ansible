@@ -1,4 +1,4 @@
-name: Build
+name: Sonarqube Scanner
 
 on:
   push:
@@ -8,13 +8,13 @@ on:
 
 jobs:
   build:
-    name: Build
+    name: Sonarqube Scanner
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1.2.0
         with:
           fetch-depth: 0  
-      - uses: sonarsource/sonarqube-scan-action@master
+      - uses: sonarsource/sonarqube-scan-action@main
         env:
           SONAR_TOKEN: sqp_d987a78df4fb9afc8215cf205380d358ae280393
           SONAR_HOST_URL: http://localhost:9000
