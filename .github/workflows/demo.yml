@@ -20,5 +20,5 @@ jobs:
           SONAR_HOST_URL: http://localhost:9000
           sonar.projectKey: sonargithub
           sonar.projectName: sonargithub
-          sonar.projectBaseDir: .
+          
     
