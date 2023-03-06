@@ -10,7 +10,7 @@ name: SonarQube Analysis on:
       - name: SonarQube Scan
         uses: sonarsource/sonarqube-scan@master
         with:
-          sonar-token: ${{ secrets.SONAR_TOKEN }}
+          sonar-token: sqp_db593163a011e456650eb0797fc20cb25b68ae8a
           sonar-project-key: sonargithub
           sonar-project-name: sonargithub
           sonar-host-url: http://localhost:9000
