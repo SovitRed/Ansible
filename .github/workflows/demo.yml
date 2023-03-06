@@ -1,0 +1,17 @@
+name: SonarQube Analysis on:
+  push:
+    branches:
+      - main jobs:
+  sonarqube:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: SonarQube Scan
+        uses: sonarsource/sonarqube-scan@master
+        with:
+          sonar-token: ${{ secrets.SONAR_TOKEN }}
+          sonar-project-key: sonargithub
+          sonar-project-name: sonargithub
+          sonar-host-url: http://localhost:9000
+          sonar-sources: .
