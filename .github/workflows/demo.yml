@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: sonarsource/sonarqube-scan-action@master
         with:
-          fetch-depth: 0  
+          args: 0  
       - uses: actions/checkout@v1.2.0
         env:
           SONAR_TOKEN: sqp_d987a78df4fb9afc8215cf205380d358ae280393
