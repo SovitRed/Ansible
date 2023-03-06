@@ -24,6 +24,6 @@ jobs:
         host: ${{ secrets.SONARQUBE_HOST }}
         login: ${{ secrets.SONARQUBE_TOKEN }}
         projectBaseDir: "."
-        sonar.projectKey: sonarqube123
-        sonar.projectName: sonarqube123
+        projectKey: sonarqube123
+        
         
