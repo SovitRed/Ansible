@@ -24,6 +24,6 @@ jobs:
         host: ${{ secrets.SONARQUBE_HOST }}
         login: ${{ secrets.SONARQUBE_TOKEN }}
         projectBaseDir: .
-        projectKey: githubsonar
+        projectKey: "githubsonar"
         
         
