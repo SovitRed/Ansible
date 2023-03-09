@@ -1,22 +1,14 @@
-kind: Deployment
+kind: Pod
 apiVersion: v1
 metadata:
-  labels:
-    app: nginx
-  name: nginx
+  name: pod1
 spec:
-  replicas: 3
-  selector:
-    matchlabels:
-      app: nginx
-  template:
-     metadata:
-        labels:
-          app: nginx
-     spec:
-       containers:
+  containers:
     - name: c00
       image: nginx
       command: ["/bin/bash", "-c", "while true; do echo Hello-Risav; sleep 5 ; done"]
+      ports:
+       - containerPort: 80
+
       
 
