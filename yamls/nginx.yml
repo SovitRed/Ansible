@@ -1,10 +1,12 @@
-apiVersion: apps/v1
-kind: service
+kind: Pod
+apiVersion: v1
 metadata:
-  name: nginx
+  name: pod1
 spec:
-  ports:
-  - port: 8080
-    targetPort: 8080
-  selector:
-     app: nginx
+  containers:
+    - name: c00
+      image: nginx
+      command: ["/bin/bash", "-c", "while true; do echo Hello-Risav; sleep 5 ; done"]
+      ports:
+       - containerPort: 80
+
