@@ -1,7 +1,7 @@
 kind: Pod
 apiVersion: v1
 metadata:
-  name: pod-001
+  name: pod-002
 spec:
   containers:
     - name: argo-001
