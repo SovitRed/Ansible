@@ -1,10 +1,10 @@
 kind: Pod
 apiVersion: v1
 metadata:
-  name: pod1
+  name: pod-001
 spec:
   containers:
-    - name: c00
+    - name: argo-001
       image: nginx
       command: ["/bin/bash", "-c", "while true; do echo Hello-Risav; sleep 5 ; done"]
       ports:
