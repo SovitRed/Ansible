@@ -5,7 +5,7 @@ metadata:
   name: nginx-deployment
   labels:
     app: nginx
-    command: ["/bin/bash", "-c", "while true; do echo Hello-Risav; sleep 5 ; done"]
+    
 spec:
   replicas: 3
   selector:
@@ -19,5 +19,6 @@ spec:
       containers:
       - name: nginx
         image: nginx:1.14.2
+        command: ["/bin/bash", "-c", "while true; do echo welcome to softobiz; sleep 5 ; done"]
         ports:
         - containerPort: 80
